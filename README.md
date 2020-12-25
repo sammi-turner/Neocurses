@@ -1,6 +1,6 @@
 # Ucurses
 
-Ncurses updated to handle C++ strings and vectors.
+[Ncurses](https://en.wikipedia.org/wiki/Ncurses) updated to handle C++ strings and vectors.
 
 This is a Nix (GNU/Linux, MacOS, BSD, etc) specific iteration of the cross-platform [Sugar.hpp](https://github.com/sammi-turner/Sugar-Hpp) repo.
 

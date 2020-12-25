@@ -72,22 +72,6 @@ using std::cerr;
 using std::system;
 ```
 
-// User input
-string nInput(int arg) {
-  char cstring[arg + 1];
-  getnstr(cstring, arg);
-  return string(cstring);
-}
-
-// Text output with autorefresh
-void rPuts(string arg) {
-  int num = arg.length();
-  char char_array[num + 1];
-  strcpy(char_array, arg.c_str());
-  addstr(char_array);
-  refresh();
-}
-
 ## Start Macro
 
 ```

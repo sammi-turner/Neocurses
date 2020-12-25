@@ -10,24 +10,17 @@ This is a Nix (GNU/Linux, MacOS, BSD, etc) specific iteration of the cross-platf
 
 * A command-line version of Yahtzee.
 
-## Compiler Flag To Remove 'Dead Code'
-
-To remove any unused code before compilation, you can use the following g++ flag.
+## Bash aliases to simplify compilation and running binaries
 
 ```
--flto
-```
+# GNU Compile C++ for Speed
+alias spd='g++ -lncurses main.cpp -flto -O'
 
-## Compiler Flag For Smallest Binary
+# GNU Compile C++ for Binary Size
+alias siz='g++ -lncurses main.cpp -flto -Os'
 
-```
--Os
-```
-
-## Compiler Flag To Optimize Binary For Speed
-
-```
--O
+# Run Freshly Compiled Binary
+alias run='./a.out'
 ```
 
 ## System headers

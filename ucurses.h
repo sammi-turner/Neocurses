@@ -28,7 +28,7 @@ using std::vector;
 using std::cerr;
 using std::system;
 
-// START macro
+// FIXED macro
 #define FIXED int main() { initscr();
 
 // SCROLL macro

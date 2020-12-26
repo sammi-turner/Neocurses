@@ -29,7 +29,10 @@ using std::cerr;
 using std::system;
 
 // START macro
-#define START int main() { initscr();
+#define FIXED int main() { initscr();
+
+// SCROLL macro
+#define SCROLL int main() { initscr(); scrollok(stdscr, TRUE);
 
 // END macro
 #define END getch(); endwin(); }

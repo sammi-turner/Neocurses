@@ -65,7 +65,7 @@ using std::cerr;
 using std::system;
 ```
 
-## Scroll Macro
+## SCROLL Macro
 
 ```
 SCROLL
@@ -79,7 +79,7 @@ int main() { initscr(); scrollok(stdscr, TRUE);
 
 Sets up a scrolling virtual terminal in conjunction with the End Macro.
 
-## Fixed Macro
+## FIXED Macro
 
 ```
 FIXED
@@ -93,7 +93,7 @@ int main() { initscr();
 
 Sets up a non-scrolling virtual terminal in conjunction with the End Macro.
 
-## End Macro
+## END Macro
 
 ```
 END
@@ -107,7 +107,7 @@ getch(); endwin(); }
 
 Works in conjunction with either the Scroll or the Fixed Macro.
 
-## Loop Macro
+## LOOP Macro
 
 ```
 LOOP(foo, bar)
@@ -119,7 +119,7 @@ aliases
 for (int foo = 0; foo < bar; foo++)
 ```
 
-## Catch Macro
+## CATCH Macro
 
 ```
 CATCH(foo)

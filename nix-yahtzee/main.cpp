@@ -6,7 +6,7 @@
 
 #define BOXES 13
 
-START
+FIXED
   defaultCard();
   LOOP(count, BOXES) {
     defaultDice();

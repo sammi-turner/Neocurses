@@ -1,4 +1,4 @@
-#include "ucurses.h"
+#include "neo.h"
 #include "routines.h"
 
 SCROLL

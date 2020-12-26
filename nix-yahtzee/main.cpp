@@ -1,4 +1,4 @@
-#include "ucurses.h"
+#include "neo.h"
 #include "dice.h"
 #include "card.h"
 #include "rerolls.h"

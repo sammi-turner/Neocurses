@@ -1,11 +1,10 @@
 #include "ucurses.h"
 #include "routines.h"
 
-START
+SCROLL
   string userInput = "";
+  rPuts("\n  TERMINAL TODOS\n");
   while (userInput != "e") {
-    clear();
-    rPuts("\n  TERMINAL TODOS\n");
     rPuts("\n  Create (c), read (r), update (u), delete (d), load (l), save (s) or exit (e)? ");
     userInput = nInput(1);
     

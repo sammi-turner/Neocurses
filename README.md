@@ -1,10 +1,10 @@
-# Ucurses
+# Neocurses
 
 [Ncurses](https://en.wikipedia.org/wiki/Ncurses) updated to handle C++ strings and vectors.
 
 This is a Nix (GNU/Linux, MacOS, BSD, etc) specific iteration of the cross-platform [Sugar.hpp](https://github.com/sammi-turner/Sugar-Hpp) repo.
 
-## Programs using Ucurses in this repo
+## Programs using Neocurses in this repo
 
 * A todos app.
 
@@ -264,6 +264,6 @@ Over-writes the contents of a file, foo, with a vector of strings, bar.
 
 For clarity, I would recommend using two spaces instead of tabs as indentation, and placing the opening curly brace on the same line as the function signature.
 
-## C++ basics without Ucurses
+## C++ basics without Neocurses
 
 [Derek Banas' 2020 C++ Tutorial](https://www.youtube.com/watch?v=6y0bp-mnYU0) on YouTube covers the basics of the language.

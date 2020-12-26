@@ -65,10 +65,24 @@ using std::cerr;
 using std::system;
 ```
 
-## Start Macro
+## Scroll Macro
 
 ```
-START
+SCROLL
+```
+
+aliases
+
+```
+int main() { initscr(); scrollok(stdscr, TRUE);
+```
+
+Sets up a scrolling virtual terminal in conjunction with the End Macro.
+
+## Fixed Macro
+
+```
+FIXED
 ```
 
 aliases
@@ -77,7 +91,7 @@ aliases
 int main() { initscr();
 ```
 
-Opens the ncurses virtual terminal in conjunction with the End Macro.
+Sets up a non-scrolling virtual terminal in conjunction with the End Macro.
 
 ## End Macro
 
@@ -91,7 +105,7 @@ aliases
 getch(); endwin(); }
 ```
 
-Opens the ncurses virtual terminal in conjunction with the Start Macro.
+Works in conjunction with either the Scroll or the Fixed Macro.
 
 ## Loop Macro
 

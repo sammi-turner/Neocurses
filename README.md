@@ -107,6 +107,34 @@ getch(); endwin(); }
 
 Works in conjunction with either the Scroll or the Fixed Macro.
 
+## KEYPAD Macro
+
+```
+KEYPAD
+```
+
+aliases
+
+```
+keypad(stdscr, TRUE);
+```
+
+Allows the 'getch()' function to recognise input from keys that are not echoed to the virtual terminal.
+
+## NO_CURSOR Macro
+
+```
+NO_CURSOR
+```
+
+aliases
+
+```
+curs_set(0);
+```
+
+Stops the cursor from being shown in the virtual terminal.
+
 ## LOOP Macro
 
 ```

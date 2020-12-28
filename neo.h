@@ -38,10 +38,10 @@ using std::system;
 #define END getch(); endwin(); }
 
 // KEYPAD macro
-#define keypad(stdscr, TRUE);
+#define KEYPAD keypad(stdscr, TRUE);
 
 // NO_CURSOR macro
-#define curs_set(0);
+#define NO_CURSOR curs_set(0);
 
 // LOOP macro
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)

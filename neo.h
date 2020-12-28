@@ -37,6 +37,12 @@ using std::system;
 // END macro
 #define END getch(); endwin(); }
 
+// KEYPAD macro
+#define keypad(stdscr, TRUE);
+
+// NO_CURSOR macro
+#define curs_set(0);
+
 // LOOP macro
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)
 

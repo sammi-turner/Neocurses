@@ -135,6 +135,20 @@ curs_set(0);
 
 Stops the cursor from being shown in the virtual terminal.
 
+## NO_KEYS Macro
+
+```
+NO_KEYS
+```
+
+aliases
+
+```
+noecho();
+```
+
+Stops character keypresses from being shown in the virtual terminal.
+
 ## LOOP Macro
 
 ```

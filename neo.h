@@ -43,6 +43,9 @@ using std::system;
 // NO_CURSOR macro
 #define NO_CURSOR curs_set(0);
 
+// NO_KEYS macro
+#define NO_KEYS noecho();
+
 // LOOP macro
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)
 

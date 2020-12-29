@@ -311,7 +311,6 @@ renderMenu(foo, bar, baz)
 Required by the 'selectOption' function.
 
 ```
-
 selectOption(foo, bar)
 ```
 

@@ -85,7 +85,7 @@ void seed() {
 int pseudo(int arg) {
   int result = 0;
   if (arg > 1) {
-    result = (rand() % arg) + 1;    
+    result = (rand() % arg) + 1;
   }
   return result;
 }
@@ -113,10 +113,10 @@ int fileWrite(string name, string text) {
   }
 }
 
-int fileAppend(string name, string text) {  
+int fileAppend(string name, string text) {
   ofstream outfile;
   outfile.open(name, std::ios_base::app);
-  outfile << text; 
+  outfile << text;
   return 0;
 }
 
@@ -156,7 +156,7 @@ bool isPosInt(string arg) {
       value = false;
     }
   }
-  return value;   
+  return value;
 }
 
 bool isNegInt(string arg) {
@@ -210,4 +210,45 @@ void overWriteStrings(string file, vector<string> data) {
     toAdd = data[i] + "\n";
     fileAppend(file, toAdd);
   }
+}
+
+// Menu Helper Functions
+void renderMenu(string menu[], int size, int count) {
+  clear();
+  rPuts("   " + menu[0] + "\n\n");
+  for (int i = 1; i < size; i++) {
+    if (i == count) {
+      rPuts(" > " + menu[i] + "\n");
+    }
+    else {
+      rPuts("   " + menu[i] + "\n");
+    }
+  };
+}
+
+int selectOption(string menu[], int size) {
+  int value = 1;
+  int keyPress;
+  do {
+    renderMenu(menu, size, value);
+    keyPress = getch();
+    switch(keyPress) {
+      case KEY_DOWN:
+        value++;
+        if (value == size) {
+          value = 1;
+        }
+        renderMenu(menu, size, value);
+        break;
+      case KEY_UP:
+        value--;
+        if (value == 0) {
+          value = (size - 1);
+        }
+        renderMenu(menu, size, value);
+      default:
+        break;
+    }
+  } while (keyPress != '\n');
+  return value;
 }

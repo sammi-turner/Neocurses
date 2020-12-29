@@ -322,6 +322,8 @@ It prints a menu from the array of strings and allows the user to select a non-z
 
 This function returns the index of the selected item.
 
+An example of this function in use is shown in 'fruit.png'.
+
 ## Style
 
 For clarity, I would recommend using two spaces instead of tabs as indentation, and placing the opening curly brace on the same line as the function signature.

@@ -302,6 +302,26 @@ overWriteStrings(foo, bar)
 
 Over-writes the contents of a file, foo, with a vector of strings, bar.
 
+# Menu Helper Functions
+
+```
+renderMenu(foo, bar, baz)
+```
+
+Required by the 'selectOption' function.
+
+```
+
+selectOption(foo, bar)
+```
+
+Once the 'KEYPAD', 'NO_CURSOR' and 'NO_KEYS' macros have been called, this function takes an array of strings, foo, of integer size, bar.
+
+It prints a menu from the array of strings and allows the user to select a non-zero indexed item from the menu using the 'up' and 'down' arrow keys, with
+'enter' to select.
+
+This function returns the index of the selected item.
+
 ## Style
 
 For clarity, I would recommend using two spaces instead of tabs as indentation, and placing the opening curly brace on the same line as the function signature.

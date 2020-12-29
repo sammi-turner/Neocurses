@@ -302,7 +302,7 @@ overWriteStrings(foo, bar)
 
 Over-writes the contents of a file, foo, with a vector of strings, bar.
 
-# Menu Helper Functions
+## Menu Helper Functions
 
 ```
 renderMenu(foo, bar, baz)

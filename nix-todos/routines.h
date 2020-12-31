@@ -1,36 +1,48 @@
 vector<string> vecList;
 
 void createRoutine() {
-  string cInput = "";
-  while (cInput != "b") {
-    rPuts("\n  Enter the item text, or 'b' to go back? ");
+  KEYS
+  clear();
+  
+  string cInput = " ";
+  while (cInput != "") {
+    clear();
+    rPuts("\n  Next item? ");
     cInput = nInput(60);
-    if (cInput != "b") {
+    if (cInput != "") {
       vecList.push_back(cInput);
     }
   }
 }
 
 void readRoutine() {
+  clear();
+  
   int count = 0;
-  rPuts("\n");
   for(string & line : vecList) {
     count ++;
     rPuts("  " + toString(count) + ". " + line + "\n");
   }
+  rPuts("\nPress any key to go back...");
+  getch();
 }
 
 void updateItem(int arg) {
   string itemText = "";
-  rPuts("\n  Enter the item text, or 'b' to go back? ");
+  rPuts("\n  Enter the item text? ");
   itemText = nInput(60);
-  if (itemText != "b") {
+  if (itemText != "") {
     vecList[arg - 1] = itemText;
     rPuts("\n  Item updated.\n");
+    rPuts("\n  Press any key to go back... ");
+    getch();
   }
 }
 
 void updateRoutine() {
+  KEYS
+  clear();
+  
   string uInput = "";
   int itemNum;
   rPuts("\n  Number of the item to update? ");
@@ -45,6 +57,9 @@ void updateRoutine() {
 }
 
 void deleteRoutine() {
+  KEYS
+  clear();
+  
   string dInput = "";
   int dNum;
   rPuts("\n  File or item to delete? ");
@@ -61,9 +76,14 @@ void deleteRoutine() {
       rPuts("\n  Item deleted.\n");
     }
   }
+  rPuts("\n  Press any key to go back... ");
+  getch();
 }
 
 void loadRoutine() {
+  KEYS
+  clear();
+  
   string lInput = "";
   int listSize = vecList.size();
     
@@ -80,9 +100,14 @@ void loadRoutine() {
   else {
     rPuts("\n  File loading failed.\n");
   }
+  rPuts("\n  Press any key to go back... ");
+  getch();
 }
 
 void saveRoutine() {
+  KEYS
+  clear();
+  
   string sInput = "";
   string toAdd = "";
   rPuts("\n  Name of file to save or overwrite? ");
@@ -91,4 +116,6 @@ void saveRoutine() {
     overWriteStrings(sInput, vecList);
     rPuts("\n  File saved.\n");
   }
+  rPuts("\n  Press any key to go back... ");
+  getch();
 }

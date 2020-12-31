@@ -2,32 +2,41 @@
 #include "routines.h"
 
 SCROLL
-  string userInput = "";
-  rPuts("\n  TERMINAL TODOS\n");
-  while (userInput != "e") {
-    rPuts("\n  Create (c), read (r), update (u), delete (d), load (l), save (s) or exit (e)? ");
-    userInput = nInput(1);
+  KEYPAD
+  
+  int result;
+  bool exit = false;
+  
+  string mainMenu[8] = {"TODOS MENU", "Create", "Read", "Update", "Delete", "Load", "Save", "Exit"};
+  
+  while (!exit) {
+    NO_KEYS
+    NO_CURSOR
     
-    if (userInput == "c") {
+    result = selectOption(mainMenu, 8);
+    
+    if (result == 1) {
       createRoutine();
     }
-    else if (userInput == "r") {
+    else if (result == 2) {
       readRoutine();
     }
-    else if (userInput == "u") {
+    else if (result == 3) {
       updateRoutine();
     }
-    else if (userInput == "d") {
+    else if (result == 4) {
       deleteRoutine();
     }
-    else if (userInput == "l") {
+    else if (result == 5) {
       loadRoutine();
     }
-    else if (userInput == "s") {
+    else if (result == 6) {
       saveRoutine();
     }
     else {
-      rPuts("\n  Press any key to close... ");
+      exit = true;
     }
   }
+
+  rPuts("\nPress any key to close...");
 END

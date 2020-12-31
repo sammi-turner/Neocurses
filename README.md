@@ -202,6 +202,19 @@ aliases
 ```
 catch (std::invalid_argument& foo)
 ```
+## Terminal Rows And Columns
+
+```
+tRows()
+```
+
+Function returns an integer corresponding to the number of rows in the terminal.
+
+```
+rColumns()
+```
+
+Function returns an integer corresponding to the number of columns in the terminal.
 
 ## Fixed length input
 

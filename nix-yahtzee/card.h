@@ -19,23 +19,8 @@ void defaultCard() {
   scoreYA = "m";
 }
 
-/* Showing the dice rolled by the player */
-void displayDice() {
-  rPuts("\n  DICE HELD\n");
-  rPuts("\n  Ones               " + toString(ones));
-  rPuts("\n  Twos               " + toString(twos));
-  rPuts("\n  Threes             " + toString(threes));
-  rPuts("\n  Fours              " + toString(fours));
-  rPuts("\n  Fives              " + toString(fives));
-  rPuts("\n  Sixes              " + toString(sixes));
-  rPuts("\n");
-  rPuts("\n  Re-rolls           " + toString(reRolls));
-  rPuts("\n");
-}
-
 void scoreCard() {
   clear();
-  rPuts("\n  SCORE CARD\n");
   rPuts("\n  Ones               " + score1s);
   rPuts("\n  Twos               " + score2s);
   rPuts("\n  Thress             " + score3s);
@@ -51,7 +36,14 @@ void scoreCard() {
   rPuts("\n  Chance             " + scoreCH);
   rPuts("\n  Yahtzee            " + scoreYA);
   rPuts("\n");
-  displayDice();
+  rPuts("\n  DICE HELD\n\n  ");
+  rPuts(toString(ones) + " 1s, ");
+  rPuts(toString(twos) + " 2s, ");
+  rPuts(toString(threes) + " 3s, ");
+  rPuts(toString(fours) + " 4s, ");
+  rPuts(toString(fives) + " 5s, ");
+  rPuts(toString(sixes) + " 6s.");
+  rPuts("\n\n");
 }
 
 /* Loop to insure that a valid input has been entered */
@@ -62,7 +54,7 @@ void scoringSelection() {
 
   while (exitLoop == false) {
     scoreCard();
-    rPuts("\n  Which scorebox? ");
+    rPuts("  Which scorebox? ");
     choice = nInput(1);
 
     if ((choice == "a") && (score1s == "a")) {

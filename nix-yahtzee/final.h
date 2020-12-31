@@ -20,6 +20,7 @@ int grandTotal() {
 
 /* Scores written to both the file "final.txt", and the screen */
 void outPutScores() {
+  clear();
   string nextLine = "";
   string outPut[22];
   

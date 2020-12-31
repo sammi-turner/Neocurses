@@ -74,7 +74,7 @@ SCROLL
 aliases
 
 ```
-int main() { initscr(); scrollok(stdscr, TRUE);
+int main() { initscr(); signal (SIGWINCH, NULL); scrollok(stdscr, TRUE);
 ```
 
 Sets up a scrolling virtual terminal in conjunction with the End Macro.
@@ -88,7 +88,7 @@ FIXED
 aliases
 
 ```
-int main() { initscr();
+int main() { initscr(); signal (SIGWINCH, NULL);
 ```
 
 Sets up a non-scrolling virtual terminal in conjunction with the End Macro.

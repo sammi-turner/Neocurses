@@ -58,14 +58,14 @@ using std::system;
 // CATCH macro
 #define CATCH(X) catch (std::invalid_argument& X)
 
-// User input
+// Fixed length input
 string nInput(int arg) {
   char cstring[arg + 1];
   getnstr(cstring, arg);
   return string(cstring);
 }
 
-// Text output with autorefresh
+// Text output
 void rPuts(string arg) {
   int num = arg.length();
   char char_array[num + 1];

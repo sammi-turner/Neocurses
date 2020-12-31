@@ -28,6 +28,8 @@ alias run='./a.out'
 Required for these and many other functions.
 
 ```
+#include <unistd.h>
+#include <signal.h>
 #include <ncurses.h>
 #include <cstdlib>
 #include <cstdio>

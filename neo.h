@@ -1,4 +1,6 @@
 // System headers
+#include <unistd.h>
+#include <signal.h>
 #include <ncurses.h>
 #include <cstdlib>
 #include <cstdio>
@@ -29,10 +31,10 @@ using std::cerr;
 using std::system;
 
 // FIXED macro
-#define FIXED int main() { initscr();
+#define FIXED int main() { initscr(); signal (SIGWINCH, NULL);
 
 // SCROLL macro
-#define SCROLL int main() { initscr(); scrollok(stdscr, TRUE);
+#define SCROLL int main() { initscr(); signal (SIGWINCH, NULL); scrollok(stdscr, TRUE);
 
 // END macro
 #define END getch(); endwin(); }

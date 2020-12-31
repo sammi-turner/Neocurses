@@ -46,6 +46,12 @@ using std::system;
 // NO_KEYS macro
 #define NO_KEYS noecho();
 
+// CURSOR macro
+#define CURSOR curs_set(1);
+
+// KEYS macro
+#define KEYS echo();
+
 // LOOP macro
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)
 
@@ -85,7 +91,7 @@ void seed() {
 int pseudo(int arg) {
   int result = 0;
   if (arg > 1) {
-    result = (rand() % arg) + 1;
+    result = (rand() % arg) + 1;    
   }
   return result;
 }
@@ -113,10 +119,10 @@ int fileWrite(string name, string text) {
   }
 }
 
-int fileAppend(string name, string text) {
+int fileAppend(string name, string text) {  
   ofstream outfile;
   outfile.open(name, std::ios_base::app);
-  outfile << text;
+  outfile << text; 
   return 0;
 }
 
@@ -156,7 +162,7 @@ bool isPosInt(string arg) {
       value = false;
     }
   }
-  return value;
+  return value;   
 }
 
 bool isNegInt(string arg) {

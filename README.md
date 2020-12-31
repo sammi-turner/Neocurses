@@ -149,6 +149,34 @@ noecho();
 
 Stops character keypresses from being shown in the virtual terminal.
 
+## CURSOR Macro
+
+```
+CURSOR
+```
+
+aliases
+
+```
+curs_set(1);
+```
+
+Reverses the effect of the 'NO_CURSOR' macro.
+
+## KEYS Macro
+
+```
+KEYS
+```
+
+aliases
+
+```
+echo();
+```
+
+Reverses the effect of the 'NO_KEYS' macro.
+
 ## LOOP Macro
 
 ```

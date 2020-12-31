@@ -201,7 +201,7 @@ aliases
 catch (std::invalid_argument& foo)
 ```
 
-## nInput
+## Fixed length input
 
 ```
 nInput(foo)
@@ -209,7 +209,7 @@ nInput(foo)
 
 Takes buffered input of maximum length foo inside the virtual terminal, and stores it as a C++ string.
 
-## rPuts
+## Output text
 
 ```
 rPuts(foo)

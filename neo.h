@@ -60,6 +60,21 @@ using std::system;
 // CATCH macro
 #define CATCH(X) catch (std::invalid_argument& X)
 
+// Terminal Rows And Columns
+int tRows() {
+  int row;
+  int col;
+  getmaxyx(stdscr, row, col);
+  return row;
+}
+
+int tColumns() {
+  int row;
+  int col;
+  getmaxyx(stdscr, row, col);
+  return col;
+}
+
 // Fixed length input
 string nInput(int arg) {
   char cstring[arg + 1];

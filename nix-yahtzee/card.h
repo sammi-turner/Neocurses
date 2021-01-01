@@ -21,13 +21,13 @@ void defaultCard() {
 
 void scoreCard() {
   clear();
+  rPuts("  SCORE CARD\n");
   rPuts("\n  Ones               " + score1s);
   rPuts("\n  Twos               " + score2s);
   rPuts("\n  Thress             " + score3s);
   rPuts("\n  Fours              " + score4s);
   rPuts("\n  Fives              " + score5s);
   rPuts("\n  Sixes              " + score6s);
-  rPuts("\n");
   rPuts("\n  Three of a Kind    " + scoreTK);
   rPuts("\n  Four of a Kind     " + scoreFK);
   rPuts("\n  Full House         " + scoreFH);

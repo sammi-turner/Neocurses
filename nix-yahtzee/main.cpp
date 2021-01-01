@@ -20,5 +20,5 @@ FIXED
     scoringSelection();
   };
   outPutScores();
-  rPuts("  Press any key to close...");
+  rPuts("  Press any key to close. ");
 END

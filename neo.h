@@ -91,6 +91,20 @@ void rPuts(string arg) {
   refresh();
 }
 
+void centerText(string arg) {
+  string margin = "";
+  int width = tColumns();
+  int len = arg.length();
+  int adjust = width - len;
+  if (adjust > 1) {
+    adjust /= 2;
+    LOOP(i, adjust) {
+      margin += " ";
+    }
+  }
+  rPuts(margin + arg);
+} 
+
 // Type conversion
 int toInt(string arg) {
   return std::stoi(arg);

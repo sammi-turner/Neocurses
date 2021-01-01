@@ -232,6 +232,12 @@ rPuts(foo)
 
 Outputs the C++ string foo to the virtual terminal, and performs a 'refresh()' afterwards.
 
+```
+centerText(foo)
+```
+
+Like 'rPuts', but outputs the string foo to the horizontal center of the virtual terminal.
+
 ## Type conversion
 
 ```

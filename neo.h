@@ -60,6 +60,28 @@ using std::system;
 // CATCH macro
 #define CATCH(X) catch (std::invalid_argument& X)
 
+// VERTICAL LINE Macro
+#define V_LINE addch(ACS_VLINE); refresh();
+
+// BOX Macros
+#define BOX_TL addch(ACS_ULCORNER); refresh();
+#define BOX_TC addch(ACS_TTEE); refresh();
+#define BOX_TR addch(ACS_URCORNER); refresh();
+#define BOX_ML addch(ACS_LTEE); refresh();
+#define BOX_MC addch(ACS_PLUS); refresh();
+#define BOX_MR addch(ACS_RTEE); refresh();
+#define BOX_BL addch(ACS_LLCORNER); refresh();
+#define BOX_BC addch(ACS_BTEE); refresh();
+#define BOX_BR addch(ACS_LRCORNER); refresh();
+
+// Horizontal Line
+void hLine(int arg) {
+  LOOP(i, arg) {
+    addch(ACS_HLINE);
+  }
+  refresh();
+}
+
 // Terminal Rows And Columns
 int tRows() {
   int row;
@@ -249,7 +271,7 @@ void overWriteStrings(string file, vector<string> data) {
   }
 }
 
-// Menu Helper Functions
+// Menu Functions
 void renderMenu(string menu[], int size, int count) {
   clear();
   rPuts("   " + menu[0] + "\n\n");

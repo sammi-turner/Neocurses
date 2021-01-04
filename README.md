@@ -215,7 +215,7 @@ aliases
 addch(ACS_VLINE); refresh();
 ```
 
-## BOX Macros
+## TOP LEFT Macro
 
 ```
 BOX_TL
@@ -226,6 +226,7 @@ aliases
 ```
 addch(ACS_ULCORNER); refresh();
 ```
+## TOP CENTRE Macro
 
 ```
 BOX_TC
@@ -237,6 +238,8 @@ aliases
 addch(ACS_TTEE); refresh();
 ```
 
+## TOP RIGHT Macro
+
 ```
 BOX_TR
 ```
@@ -246,6 +249,8 @@ aliases
 ```
 addch(ACS_URCORNER); refresh();
 ```
+
+## MIDDLE LEFT Macro
 
 ```
 BOX_ML
@@ -257,6 +262,8 @@ aliases
 addch(ACS_LTEE); refresh();
 ```
 
+## MIDDLE CENTRE Macro
+
 ```
 BOX_MC
 ```
@@ -266,6 +273,8 @@ aliases
 ```
 addch(ACS_PLUS); refresh();
 ```
+
+## MIDDLE RIGHT Macro
 
 ```
 BOX_MR
@@ -277,6 +286,8 @@ aliases
 addch(ACS_RTEE); refresh();
 ```
 
+## BOTTOM LEFT Macro
+
 ```
 BOX_BL
 ```
@@ -287,6 +298,8 @@ aliases
 addch(ACS_LLCORNER); refresh();
 ```
 
+## BOTTOM CENTRE Macro
+
 ```
 BOX_BC
 ```
@@ -296,6 +309,8 @@ aliases
 ```
 addch(ACS_BTEE); refresh();
 ```
+
+## BOTTOM RIGHT Macro
 
 ```
 BOX_BR

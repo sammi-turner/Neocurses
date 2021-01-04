@@ -202,6 +202,119 @@ aliases
 ```
 catch (std::invalid_argument& foo)
 ```
+
+## VERTICAL LINE Macro
+
+```
+V_LINE
+```
+
+aliases
+
+```
+addch(ACS_VLINE); refresh();
+```
+
+## BOX Macros
+
+```
+BOX_TL
+```
+
+aliases
+
+```
+addch(ACS_ULCORNER); refresh();
+```
+
+```
+BOX_TC
+```
+
+aliases
+
+```
+addch(ACS_TTEE); refresh();
+```
+
+```
+BOX_TR
+```
+
+aliases
+
+```
+addch(ACS_URCORNER); refresh();
+```
+
+```
+BOX_ML
+```
+
+aliases
+
+```
+addch(ACS_LTEE); refresh();
+```
+
+```
+BOX_MC
+```
+
+aliases
+
+```
+addch(ACS_PLUS); refresh();
+```
+
+```
+BOX_MR
+```
+
+aliases
+
+```
+addch(ACS_RTEE); refresh();
+```
+
+```
+BOX_BL
+```
+
+aliases
+
+```
+addch(ACS_LLCORNER); refresh();
+```
+
+```
+BOX_BC
+```
+
+aliases
+
+```
+addch(ACS_BTEE); refresh();
+```
+
+```
+BOX_BR
+```
+aliases
+
+```
+addch(ACS_LRCORNER); refresh();
+```
+
+## Horizontal Lines
+
+```
+hLine(foo)
+```
+
+Function prints a horizontal line of length, foo to the virtual terminal.
+
+
 ## Terminal Rows And Columns
 
 ```

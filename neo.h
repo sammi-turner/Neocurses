@@ -60,28 +60,6 @@ using std::system;
 // CATCH macro
 #define CATCH(X) catch (std::invalid_argument& X)
 
-// VERTICAL LINE Macro
-#define V_LINE addch(ACS_VLINE); refresh();
-
-// BOX Macros
-#define BOX_TL addch(ACS_ULCORNER); refresh();
-#define BOX_TC addch(ACS_TTEE); refresh();
-#define BOX_TR addch(ACS_URCORNER); refresh();
-#define BOX_ML addch(ACS_LTEE); refresh();
-#define BOX_MC addch(ACS_PLUS); refresh();
-#define BOX_MR addch(ACS_RTEE); refresh();
-#define BOX_BL addch(ACS_LLCORNER); refresh();
-#define BOX_BC addch(ACS_BTEE); refresh();
-#define BOX_BR addch(ACS_LRCORNER); refresh();
-
-// Horizontal Line
-void hLine(int arg) {
-  LOOP(i, arg) {
-    addch(ACS_HLINE);
-  }
-  refresh();
-}
-
 // Terminal Rows And Columns
 int tRows() {
   int row;
@@ -112,20 +90,6 @@ void rPuts(string arg) {
   addstr(char_array);
   refresh();
 }
-
-void centerText(string arg) {
-  string margin = "";
-  int width = tColumns();
-  int len = arg.length();
-  int adjust = width - len;
-  if (adjust > 1) {
-    adjust /= 2;
-    LOOP(i, adjust) {
-      margin += " ";
-    }
-  }
-  rPuts(margin + arg);
-} 
 
 // Type conversion
 int toInt(string arg) {
@@ -271,7 +235,7 @@ void overWriteStrings(string file, vector<string> data) {
   }
 }
 
-// Menu Functions
+// Menu Helper Functions
 void renderMenu(string menu[], int size, int count) {
   clear();
   rPuts("   " + menu[0] + "\n\n");
@@ -305,6 +269,47 @@ int selectOption(string menu[], int size) {
           value = (size - 1);
         }
         renderMenu(menu, size, value);
+      default:
+        break;
+    }
+  } while (keyPress != '\n');
+  return value;
+}
+
+// Indented Menu Helper Functions
+void indentRenderMenu(string menu[], int size, int count) {
+  clear();
+  rPuts(menu[0] + "   " + menu[1] + "\n\n");
+  for (int i = 2; i < size; i++) {
+    if (i == count) {
+      rPuts(menu[0] + " > " + menu[i] + "\n");
+    }
+    else {
+      rPuts(menu[0] + "   " + menu[i] + "\n");
+    }
+  };
+}
+
+int indentSelectOption(string menu[], int size) {
+  int value = 2;
+  int keyPress;
+  do {
+    indentRenderMenu(menu, size, value);
+    keyPress = getch();
+    switch(keyPress) {
+      case KEY_DOWN:
+        value++;
+        if (value == size) {
+          value = 2;
+        }
+        indentRenderMenu(menu, size, value);
+        break;
+      case KEY_UP:
+        value--;
+        if (value == 1) {
+          value = (size - 1);
+        }
+        indentRenderMenu(menu, size, value);
       default:
         break;
     }

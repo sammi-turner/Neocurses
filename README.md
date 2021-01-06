@@ -500,6 +500,20 @@ This function returns the index of the selected item.
 
 An example of this function in use is shown in 'fruit.png'.
 
+## Indented Menu Helper Functions
+
+```
+indentRenderMenu(foo, bar, baz)
+```
+
+Required by the 'indentSelectOption' function.
+
+```
+indentSelectOption(foo, bar)
+```
+
+Works in the same way as 'selectOption' but with the 0th element of the array being an indent that is applied to every line in the menu.
+
 ## Style
 
 For clarity, I would recommend using two spaces instead of tabs as indentation, and placing the opening curly brace on the same line as the function signature.

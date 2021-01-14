@@ -163,11 +163,73 @@ void fileDelete(string arg) {
   remove(fileName);
 }
 
-// Strings
+// Parsing strings
+string firstWord(string arg) {
+  string result = arg;
+
+  while (result[0] == ' ') {
+    result = result.substr(1, result.length());
+  }
+
+  int index = result.find(" ");
+  result = result.substr(0, index);
+
+  return result;
+}
+
+string otherWords(string arg) {
+  string result = arg;
+
+  while (result[0] == ' ') {
+    result = result.substr(1, result.length());
+  }
+
+  int index = result.find(" ");
+  result = result.substr((index + 1), result.length());
+
+  return result;
+}
+
+int wordCount(string arg) {
+  string first = firstWord(arg);
+  string final = otherWords(arg);
+  int count = 0;
+  
+  while (first != final) {
+    count++;
+    first = firstWord(final);
+    final = otherWords(final);
+  }
+
+  count += (final != "");
+  return count;
+}
+
+string nthWord(string arg, int index) {
+  int count = 0;
+  string first = "";
+  string final = "";
+
+  if (wordCount(arg) > index) {
+    first = firstWord(arg);
+    final = otherWords(arg);
+  }
+  
+  while (count < index) {
+    count++;
+    first = firstWord(final);
+    final = otherWords(final);
+  }
+
+  return first;
+}
+
+// Alphabtic strings
 bool isAlphabetic(string arg) {
   return regex_match(arg, regex("^[A-Za-z]+$"));
 }
 
+// Numeric strings
 bool isPosInt(string arg) {
   bool value = true;
   int len = arg.length();

@@ -224,7 +224,7 @@ string nthWord(string arg, int index) {
   return first;
 }
 
-// Alphabtic strings
+// Alphabetic strings
 bool isAlphabetic(string arg) {
   return regex_match(arg, regex("^[A-Za-z]+$"));
 }

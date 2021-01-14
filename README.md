@@ -427,13 +427,41 @@ fileDelete(foo)
 
 Removes the named file foo from the working directory.
 
-## Strings
+## Parsing Strings
+
+```
+firstWord(foo)
+```
+
+Returns the first word of a string, foo, minus any whitespace.
+
+```
+otherWords(foo)
+```
+
+Returns the string, foo, minus initial whitespace and the first word of the string.
+
+```
+wordCount(foo)
+```
+
+Returns an integer corresponding to the number of words in the string, foo.
+
+```
+nthWord(foo, bar)
+```
+
+Returns a word taken from the string, foo, corresponding to the zero-index, bar.
+
+## Alphabetic Strings
 
 ```
 isAlphabetic(foo)
 ```
 
 Checks if the string foo is purely alphabetic.
+
+## Numeric Strings
 
 ```
 isPosInt(foo)

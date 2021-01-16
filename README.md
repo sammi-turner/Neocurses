@@ -10,16 +10,22 @@ This is a Nix (GNU/Linux, MacOS, BSD, etc) specific iteration of the cross-platf
 
 * A command-line version of Yahtzee.
 
-## Bash aliases to simplify compilation and running binaries
+## Bash aliases to simplify workflow
 
 ```
-# GNU Compile C++ for Speed
+# GNU Compile Ncurses C++ for Speed
 alias spd='g++ -lncurses main.cpp -flto -O'
 
-# GNU Compile C++ for Binary Size
+# GNU Compile Ncurses C++ for Smallest Binary
 alias siz='g++ -lncurses main.cpp -flto -Os'
 
-# Run Freshly Compiled Binary
+# Create Main C++ File
+alias tmc='touch main.cpp'
+
+# Edit Main C++ File
+alias vmc='vim main.cpp'
+
+# Run Binary With Default Name
 alias run='./a.out'
 ```
 

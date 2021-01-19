@@ -473,6 +473,18 @@ isAlphabetic(foo)
 
 Checks if the string foo is purely alphabetic.
 
+```
+isLowerCase(foo)
+```
+
+Checks if the string foo is purely lower case.
+
+```
+isUpperCase(foo)
+```
+
+Checks if the string foo is purely upper case.
+
 ## Numeric Strings
 
 ```

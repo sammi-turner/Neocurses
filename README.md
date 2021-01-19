@@ -453,6 +453,18 @@ nthWord(foo, bar)
 
 Returns a word taken from the string, foo, corresponding to the zero-index, bar.
 
+```
+spaceToDelim(foo, bar)
+```
+
+Returns the string obtained by replacing every space in the string foo, with the string, bar.
+
+```
+delimToSpace(foo, bar)
+```
+
+Returns the string obtained by replacing every instance of the string bar, in the string foo, with a space.
+
 ## Alphabetic Strings
 
 ```

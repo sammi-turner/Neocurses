@@ -248,6 +248,14 @@ bool isAlphabetic(string arg) {
   return regex_match(arg, regex("^[A-Za-z]+$"));
 }
 
+bool isLowerCase(string arg) {
+  return regex_match(arg, regex("^[a-z]+$"));
+}
+
+bool isUpperCase(string arg) {
+  return (isAlphabetic(arg) && !isLowerCase(arg));
+}
+
 // Numeric strings
 bool isPosInt(string arg) {
   bool value = true;

@@ -224,6 +224,25 @@ string nthWord(string arg, int index) {
   return first;
 }
 
+string spaceToDelim(string arg, string delim) {
+  string value = firstWord(arg);
+  int count = wordCount(arg);
+  string wordArray[count];
+  for (int i = 1; i < count; i++) {
+    value += delim + nthWord(arg, i);
+  }
+  return value;
+}
+
+string delimToSpace(string arg, string delim) {
+  size_t pos;
+  int len = delim.length();
+  while ((pos = arg.find(delim)) != string::npos) {
+    arg.replace(pos, len, " ");
+  }
+  return arg;
+}
+
 // Alphabetic strings
 bool isAlphabetic(string arg) {
   return regex_match(arg, regex("^[A-Za-z]+$"));

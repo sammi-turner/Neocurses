@@ -321,6 +321,15 @@ aliases
 addch(ACS_LRCORNER); refresh();
 ```
 
+## System calls
+
+```
+systemCall(foo)
+```
+
+Native system calls in C/C++ take a C-string (null-terminated char array) as their argument. This function takes a C++ string as its parameter
+instead.
+
 ## Horizontal Lines
 
 ```

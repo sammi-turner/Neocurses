@@ -60,7 +60,13 @@ using std::system;
 // CATCH macro
 #define CATCH(X) catch (std::invalid_argument& X)
 
-// Terminal Rows And Columns
+// System calls
+void systemCall(string arg) {
+  const char * c = arg.c_str();
+  system(c);
+}
+
+// Terminal rows and columns
 int tRows() {
   int row;
   int col;

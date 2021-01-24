@@ -312,6 +312,12 @@ Removes the named file foo from the working directory.
 ## Parsing Strings
 
 ```
+superString(foo, bar)
+```
+
+Returns '1' if the string foo, contains the string bar, or '0' if it does not.
+
+```
 firstWord(foo)
 ```
 

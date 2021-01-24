@@ -170,6 +170,17 @@ void fileDelete(string arg) {
 }
 
 // Parsing strings
+bool superString(string arg1, string arg2) {
+  bool value;
+  if (arg1.find(arg2) != std::string::npos) {
+    value = true;
+  }
+  else {
+    value = false;
+  }
+  return value;
+}
+
 string firstWord(string arg) {
   string result = arg;
 

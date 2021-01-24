@@ -263,42 +263,26 @@ bool isUpperCase(string arg) {
 }
 
 // Numeric strings
-bool isPosInt(string arg) {
+bool isInt(string arg) {
   bool value = true;
-  int len = arg.length();
-  if (arg[0] == '0' || len == 0) {
-	value = false;
+  try {
+    int num = toInt(arg);
   }
-  for (int i = 0; i < len; i++) {
-    if (isdigit(arg[i]) == false) {
-      value = false;
-    }
-  }
-  return value;   
-}
-
-bool isNegInt(string arg) {
-  string num = "";
-  bool value = true;
-  int len = arg.length();
-  if (arg[0] != '-') {
-	value = false;
-  }
-  if (len > 1) {
-    num = arg.substr(1, (len - 1));
-  }
-  if (isPosInt(num) == false) {
-	value = false;
+  oops(e) {
+    value = false;
   }
   return value;
 }
 
-bool isInt(string arg) {
-  return (isPosInt(arg) || arg == "0" || isNegInt(arg));
-}
-
-bool isSignedInt(string arg) {
-  return (isPosInt(arg) || isNegInt(arg));
+bool isDouble(string arg) {
+  bool value = true;
+  try {
+    int num = toDouble(arg);
+  }
+  oops(e) {
+    value = false;
+  }
+  return value;
 }
 
 bool isBool(string arg) {

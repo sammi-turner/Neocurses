@@ -497,28 +497,16 @@ Checks if the string foo is purely upper case.
 ## Numeric Strings
 
 ```
-isPosInt(foo)
-```
-
-Checks if the string foo represents a positive integer.
-
-```
-isNegInt(foo)
-```
-
-Checks if the string foo represents a negative integer.
-
-```
 isInt(foo)
 ```
 
 Checks if the string foo represents an integer.
 
 ```
-isSignedInt(foo)
+isDouble(foo)
 ```
 
-Checks if the string foo represents a signed integer.
+Checks if the string foo represents a double.
 
 ```
 isBool(foo)

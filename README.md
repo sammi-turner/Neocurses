@@ -342,6 +342,12 @@ nthWord(foo, bar)
 Returns a word taken from the string, foo, corresponding to the zero-index, bar.
 
 ```
+wordFromSentence(foo, bar)
+```
+
+Returns '1' if the string foo, occurs as a space-delimited word in the sentence string, bar. Returns '0' if it does not.
+
+```
 spaceToDelim(foo, bar)
 ```
 

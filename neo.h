@@ -241,6 +241,17 @@ string nthWord(string arg, int index) {
   return first;
 }
 
+bool wordFromSentence(string word, string sentence) {
+  bool value = false;
+  int count = wordCount(sentence);
+  loopThrough(i, count) {
+    if (word == nthWord(sentence, i)) {
+      value = true;
+    }
+  }
+  return value;
+}
+
 string spaceToDelim(string arg, string delim) {
   string value = firstWord(arg);
   int count = wordCount(arg);

@@ -356,6 +356,12 @@ delimToSpace(foo, bar)
 
 Returns the string obtained by replacing every instance of the string bar, in the string foo, with a space.
 
+```
+substitute(foo, bar, baz)
+```
+
+Returns the string obtained by replacing every instance of the string bar, with the string baz, inside the parent string foo.
+
 ## Alphabetic Strings
 
 ```

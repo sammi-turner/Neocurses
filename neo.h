@@ -271,6 +271,15 @@ string delimToSpace(string arg, string delim) {
   return arg;
 }
 
+string substitute(string arg, string x, string y) {
+  size_t pos;
+  int len = x.length();
+  while ((pos = arg.find(x)) != string::npos) {
+    arg.replace(pos, len, y);
+  }
+  return arg;
+}
+
 // Alphabetic strings
 bool isAlphabetic(string arg) {
   return regex_match(arg, regex("^[A-Za-z]+$"));

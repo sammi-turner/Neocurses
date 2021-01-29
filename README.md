@@ -14,7 +14,7 @@ This is a Nix (GNU/Linux, MacOS, BSD, etc) specific iteration of the cross-platf
 
 ```
 # GNU Compile Ncurses C++20
-alias c20='g++ -lncurses main.cpp -flto -O -std=c++20'
+alias ncu='g++ -lncurses main.cpp -flto -O -std=c++20'
 
 # Run Binary With Default Name
 alias run='./a.out'

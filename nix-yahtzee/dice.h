@@ -16,7 +16,7 @@ void defaultDice() {
 void diceCount() {
   seed();
   while (reRolls > 0) {
-    int roll = pseudo(6);
+    int roll = random(6);
     reRolls--;
     switch (roll) {
       case 1:

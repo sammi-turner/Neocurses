@@ -51,12 +51,13 @@ Required for these and many other functions.
 So you can use these methods without the 'std::' prefix.
 
 ```
+using std::invalid_argument;
 using std::ostringstream;
 using std::regex_match;
+using std::ios_base;
 using std::regex;
 using std::ofstream;
 using std::ifstream;
-using std::isdigit;
 using std::isdigit;
 using std::string;
 using std::vector;
@@ -203,7 +204,7 @@ catch (std::invalid_argument& foo)
 ## System calls
 
 ```
-systemCall(foo)
+shell(foo)
 ```
 
 Native system calls in C/C++ take a C-string (null-terminated char array) as their argument. This function takes a C++ string as its parameter
@@ -254,6 +255,12 @@ toInt(foo)
 Converts the C++ string foo to an integer.
 
 ```
+toDouble(foo)
+```
+
+Converts the C++ string foo to a double.
+
+```
 toString(foo)
 ```
 
@@ -266,13 +273,13 @@ Converts the integer foo to a C++ string.
 seed()
 ```
 
-Seeds the pseudo-random number generator.
+Seeds the random-random number generator.
 
 ```
-pseudo(foo)
+random(foo)
 ```
 
-Generates a pseudo-random number between 1 and the integer foo, provided that foo is greater than 1. Otherwise, it returns 0.
+Generates a random-random number between 1 and the integer foo, provided that foo is greater than 1. Otherwise, it returns 0.
 
 ## File IO
 

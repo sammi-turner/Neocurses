@@ -19,8 +19,10 @@
 #include <stdexcept>
 
 // Declarations
+using std::invalid_argument;
 using std::ostringstream;
 using std::regex_match;
+using std::ios_base;
 using std::regex;
 using std::ofstream;
 using std::ifstream;
@@ -58,10 +60,10 @@ using std::system;
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)
 
 // CATCH macro
-#define CATCH(X) catch (std::invalid_argument& X)
+#define CATCH(X) catch (invalid_argument& X)
 
 // System calls
-void systemCall(string arg) {
+void shell(string arg) {
   const char * c = arg.c_str();
   system(c);
 }
@@ -102,6 +104,10 @@ int toInt(string arg) {
   return std::stoi(arg);
 }
 
+int toDouble(string arg) {
+  return std::stod(arg);
+}
+
 string toString(int arg) {
   return std::to_string(arg);
 }
@@ -111,7 +117,7 @@ void seed() {
   srand((int)time(0));
 }
 
-int pseudo(int arg) {
+int random(int arg) {
   int result = 0;
   if (arg > 1) {
     result = (rand() % arg) + 1;    
@@ -144,7 +150,7 @@ int fileWrite(string name, string text) {
 
 int fileAppend(string name, string text) {  
   ofstream outfile;
-  outfile.open(name, std::ios_base::app);
+  outfile.open(name, ios_base::app);
   outfile << text; 
   return 0;
 }
@@ -244,7 +250,7 @@ string nthWord(string arg, int index) {
 bool wordFromSentence(string word, string sentence) {
   bool value = false;
   int count = wordCount(sentence);
-  loopThrough(i, count) {
+  LOOP(i, count) {
     if (word == nthWord(sentence, i)) {
       value = true;
     }
@@ -299,7 +305,7 @@ bool isInt(string arg) {
   try {
     int num = toInt(arg);
   }
-  oops(e) {
+  CATCH(e) {
     value = false;
   }
   return value;
@@ -310,7 +316,7 @@ bool isDouble(string arg) {
   try {
     int num = toDouble(arg);
   }
-  oops(e) {
+  CATCH(e) {
     value = false;
   }
   return value;

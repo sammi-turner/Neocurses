@@ -307,17 +307,6 @@ bool isInt(string arg) {
   return value;
 }
 
-bool isDouble(string arg) {
-  bool value = true;
-  try {
-    int num = toDouble(arg);
-  }
-  CATCH(e) {
-    value = false;
-  }
-  return value;
-}
-
 bool isBool(string arg) {
   return (arg == "0" || arg == "1");
 }

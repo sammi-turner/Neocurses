@@ -104,10 +104,6 @@ int toInt(string arg) {
   return std::stoi(arg);
 }
 
-int toDouble(string arg) {
-  return std::stod(arg);
-}
-
 string toString(int arg) {
   return std::to_string(arg);
 }

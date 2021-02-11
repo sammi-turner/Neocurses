@@ -255,12 +255,6 @@ toInt(foo)
 Converts the C++ string foo to an integer.
 
 ```
-toDouble(foo)
-```
-
-Converts the C++ string foo to a double.
-
-```
 toString(foo)
 ```
 

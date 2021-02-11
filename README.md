@@ -392,12 +392,6 @@ isInt(foo)
 Checks if the string foo represents an integer.
 
 ```
-isDouble(foo)
-```
-
-Checks if the string foo represents a double.
-
-```
 isBool(foo)
 ```
 

@@ -53,6 +53,7 @@ So you can use these methods without the 'std::' prefix.
 ```
 using std::invalid_argument;
 using std::ostringstream;
+using std::to_string;
 using std::regex_match;
 using std::ios_base;
 using std::regex;
@@ -253,12 +254,6 @@ toInt(foo)
 ```
 
 Converts the C++ string foo to an integer.
-
-```
-toString(foo)
-```
-
-Converts the integer foo to a C++ string.
 
 
 ## Random numbers

@@ -21,6 +21,7 @@
 // Declarations
 using std::invalid_argument;
 using std::ostringstream;
+using std::to_string;
 using std::regex_match;
 using std::ios_base;
 using std::regex;

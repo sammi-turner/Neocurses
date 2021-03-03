@@ -59,79 +59,79 @@ void scoringSelection() {
 
     if ((choice == "a") && (score1s == "a")) {
       num = ones;
-      score1s = toString(num);
+      score1s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "b") && (score2s == "b")) {
       num = (twos * 2);
-      score2s = toString(num);
+      score2s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "c") && (score3s == "c")) {
       num = (threes * 3);
-      score3s = toString(num);
+      score3s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "d") && (score4s == "d")) {
       num = (fours * 4);
-      score4s = toString(num);
+      score4s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "e") && (score5s == "e")) {
       num = (fives * 5);
-      score5s = toString(num);
+      score5s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "f") && (score6s == "f")) {
       num = (sixes * 6);
-      score6s = toString(num);
+      score6s = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "g") && (scoreTK == "g")) {
       num = threeOfAKind();
-      scoreTK = toString(num);
+      scoreTK = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "h") && (scoreFK == "h")) {
       num = fourOfAKind();
-      scoreFK = toString(num);
+      scoreFK = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "i") && (scoreFH == "i")) {
       num = fullHouse();
-      scoreFH = toString(num);
+      scoreFH = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "j") && (scoreSS == "j")) {
       num = smallStraight();
-      scoreSS = toString(num);
+      scoreSS = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "k") && (scoreLS == "k")) {
       num = largeStraight();
-      scoreLS = toString(num);
+      scoreLS = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "l") && (scoreCH == "l")) {
       num = chance();
-      scoreCH = toString(num);
+      scoreCH = to_string(num);
       exitLoop = true;
     };
 
     if ((choice == "m") && (scoreYA == "m")) {
       num = yahtzee();
-      scoreYA = toString(num);
+      scoreYA = to_string(num);
       exitLoop = true;
     };
   }

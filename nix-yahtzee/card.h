@@ -37,12 +37,12 @@ void scoreCard() {
   rPuts("\n  Yahtzee            " + scoreYA);
   rPuts("\n");
   rPuts("\n  DICE HELD\n\n  ");
-  rPuts(toString(ones) + " 1s, ");
-  rPuts(toString(twos) + " 2s, ");
-  rPuts(toString(threes) + " 3s, ");
-  rPuts(toString(fours) + " 4s, ");
-  rPuts(toString(fives) + " 5s, ");
-  rPuts(toString(sixes) + " 6s.");
+  rPuts(to_string(ones) + " 1s, ");
+  rPuts(to_string(twos) + " 2s, ");
+  rPuts(to_string(threes) + " 3s, ");
+  rPuts(to_string(fours) + " 4s, ");
+  rPuts(to_string(fives) + " 5s, ");
+  rPuts(to_string(sixes) + " 6s.");
   rPuts("\n\n");
 }
 

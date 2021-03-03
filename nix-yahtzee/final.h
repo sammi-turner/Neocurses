@@ -33,8 +33,8 @@ void outPutScores() {
   outPut[6] = "  Fives               " + score5s;
   outPut[7] = "  Sixes               " + score6s;
   outPut[8] = "";
-  outPut[9] = "  Upper Total         " + toString(upperTotal());
-  outPut[10] = "  Upper Bonus         " + toString(upperBonus());
+  outPut[9] = "  Upper Total         " + to_string(upperTotal());
+  outPut[10] = "  Upper Bonus         " + to_string(upperBonus());
   outPut[11] = "";
   outPut[12] = "  Three of a kind     " + scoreTK;
   outPut[13] = "  Four of a kind      " + scoreFK;
@@ -44,7 +44,7 @@ void outPutScores() {
   outPut[17] = "  Chance              " + scoreCH;
   outPut[18] = "  Yahtzee             " + scoreYA;
   outPut[19] = "";
-  outPut[20] = "  GRAND TOTAL         " + toString(grandTotal());
+  outPut[20] = "  GRAND TOTAL         " + to_string(grandTotal());
   outPut[21] = "";
 
   LOOP(line, 22) {

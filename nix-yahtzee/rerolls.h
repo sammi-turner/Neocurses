@@ -6,7 +6,7 @@ void playerReRolls() {
   if (ones > 0) {
     while (dice < 0 || dice > ones) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many ones to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);
@@ -19,7 +19,7 @@ void playerReRolls() {
   if (twos > 0) {
     while (dice < 0 || dice > twos) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many twos to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);
@@ -32,7 +32,7 @@ void playerReRolls() {
   if (threes > 0) {
     while (dice < 0 || dice > threes) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many threes to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);
@@ -45,7 +45,7 @@ void playerReRolls() {
   if (fours > 0) {
     while (dice < 0 || dice > fours) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many fours to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);
@@ -58,7 +58,7 @@ void playerReRolls() {
   if (fives > 0) {
     while (dice < 0 || dice > fives) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many fives to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);
@@ -71,7 +71,7 @@ void playerReRolls() {
    if (sixes > 0) {
     while (dice < 0 || dice > sixes) {
       scoreCard();
-      rPuts("  You have " + toString(reRolls) + " re-rolls.\n");
+      rPuts("  You have " + to_string(reRolls) + " re-rolls.\n");
       rPuts("\n  How many sixes to re-roll? ");
       userInput = nInput(1);
       dice = toInt(userInput);

@@ -86,7 +86,7 @@ int tColumns() {
 
 // Fixed length input
 string nInput(int arg) {
-  char cstring[arg];
+  char cstring[arg + 1];
   getnstr(cstring, arg);
   return string(cstring);
 }
@@ -94,7 +94,7 @@ string nInput(int arg) {
 // Text output
 void rPuts(string arg) {
   int num = arg.length();
-  char char_array[num];
+  char char_array[num + 1];
   strcpy(char_array, arg.c_str());
   addstr(char_array);
   refresh();
@@ -103,6 +103,10 @@ void rPuts(string arg) {
 // Type conversion
 int toInt(string arg) {
   return std::stoi(arg);
+}
+
+string toString(int arg) {
+  return std::to_string(arg);
 }
 
 // Random numbers
@@ -293,19 +297,17 @@ bool isUpperCase(string arg) {
 }
 
 // Numeric strings
-bool isInt(string arg) {
-  bool value = true;
-  try {
-    int num = toInt(arg);
-  }
-  CATCH(e) {
-    value = false;
-  }
-  return value;
-}
-
 bool isBool(string arg) {
   return (arg == "0" || arg == "1");
+}
+
+bool isInt(string arg) {
+  char *p;
+  if (arg.empty() || ((!isdigit(arg[0])) && (arg[0] != '-') && (arg[0] != '+'))) {
+    return false;
+  }
+  strtol(arg.c_str(), &p, 10);
+  return (*p == 0);
 }
 
 // Vectors

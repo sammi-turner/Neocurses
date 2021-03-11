@@ -392,6 +392,12 @@ isBool(foo)
 
 Checks if the string foo represents a boolean value.
 
+```
+isFloat(foo)
+```
+
+Checks if the string foo represents a float.
+
 ## Vectors
 
 ```

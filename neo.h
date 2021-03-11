@@ -20,6 +20,8 @@
 
 // Declarations
 using std::invalid_argument;
+using std::istringstream;
+using std::noskipws;
 using std::ostringstream;
 using std::to_string;
 using std::regex_match;
@@ -308,6 +310,13 @@ bool isInt(string arg) {
   }
   strtol(arg.c_str(), &p, 10);
   return (*p == 0);
+}
+
+bool isFloat(string arg) {
+  float f;
+  istringstream iss(arg);
+  iss >> noskipws >> f;
+  return iss.eof() && !iss.fail();
 }
 
 // Vectors

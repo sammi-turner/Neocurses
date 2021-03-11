@@ -63,7 +63,7 @@ using std::system;
 #define LOOP(X, Y) for (int X = 0; X < Y; X++)
 
 // CATCH macro
-#define CATCH(X) catch (invalid_argument& X)
+#define CATCH(X) catch (invalid_argument X)
 
 // System calls
 void shell(string arg) {

@@ -199,7 +199,7 @@ CATCH(foo)
 aliases
 
 ```
-catch (std::invalid_argument& foo)
+catch (invalid_argument foo)
 ```
 
 ## System calls

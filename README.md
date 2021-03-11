@@ -51,7 +51,8 @@ Required for these and many other functions.
 So you can use these methods without the 'std::' prefix.
 
 ```
-using std::invalid_argument;
+using std::istringstream;
+using std::noskipws;
 using std::ostringstream;
 using std::to_string;
 using std::regex_match;
@@ -188,18 +189,6 @@ aliases
 
 ```
 for (int foo = 0; foo < bar; foo++)
-```
-
-## CATCH Macro
-
-```
-CATCH(foo)
-```
-
-aliases
-
-```
-catch (invalid_argument foo)
 ```
 
 ## System calls

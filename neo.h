@@ -86,7 +86,7 @@ int tColumns() {
 
 // Fixed length input
 string nInput(int arg) {
-  char cstring[arg + 1];
+  char cstring[arg];
   getnstr(cstring, arg);
   return string(cstring);
 }
@@ -94,7 +94,7 @@ string nInput(int arg) {
 // Text output
 void rPuts(string arg) {
   int num = arg.length();
-  char char_array[num + 1];
+  char char_array[num];
   strcpy(char_array, arg.c_str());
   addstr(char_array);
   refresh();

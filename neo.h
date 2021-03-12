@@ -94,7 +94,7 @@ void rPuts(string arg) {
   int num = arg.length();
   char char_array[num + 1];
   strcpy(char_array, arg.c_str());
-  addstr(char_array);
+  printw(char_array);
   refresh();
 }
 

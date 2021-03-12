@@ -7,7 +7,7 @@
 #define BOXES 13
 
 FIXED
-  defaultCard();
+  KEYPAD
   LOOP(count, BOXES) {
     defaultDice();
     diceCount();
@@ -20,5 +20,6 @@ FIXED
     scoringSelection();
   };
   outPutScores();
-  rPuts("  Press any key to close. ");
+  printw("  Press any key to close. ");
+  refresh();
 END

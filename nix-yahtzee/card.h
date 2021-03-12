@@ -1,137 +1,197 @@
 /* Initialise scores */
-string score1s, score2s, score3s, score4s, score5s, score6s,
-  scoreTK, scoreFK, scoreFH, scoreSS, scoreLS, scoreCH, scoreYA;
-
-/* Applied at the start of each game */
-void defaultCard() {
-  score1s = "a";
-  score2s = "b";
-  score3s = "c";
-  score4s = "d";
-  score5s = "e";
-  score6s = "f";
-  scoreTK = "g";
-  scoreFK = "h";
-  scoreFH = "i";
-  scoreSS = "j";
-  scoreLS = "k";
-  scoreCH = "l";
-  scoreYA = "m";
-}
+int score1s = -1;
+int score2s = -1;
+int score3s = -1;
+int score4s = -1;
+int score5s = -1;
+int score6s = -1;
+int scoreTK = -1;
+int scoreFK = -1;
+int scoreFH = -1;
+int scoreSS = -1;
+int scoreLS = -1;
+int scoreCH = -1;
+int scoreYA = -1;
 
 void scoreCard() {
   clear();
-  rPuts("  SCORE CARD\n");
-  rPuts("\n  Ones               " + score1s);
-  rPuts("\n  Twos               " + score2s);
-  rPuts("\n  Thress             " + score3s);
-  rPuts("\n  Fours              " + score4s);
-  rPuts("\n  Fives              " + score5s);
-  rPuts("\n  Sixes              " + score6s);
-  rPuts("\n  Three of a Kind    " + scoreTK);
-  rPuts("\n  Four of a Kind     " + scoreFK);
-  rPuts("\n  Full House         " + scoreFH);
-  rPuts("\n  Small Straight     " + scoreSS);
-  rPuts("\n  Large Straight     " + scoreLS);
-  rPuts("\n  Chance             " + scoreCH);
-  rPuts("\n  Yahtzee            " + scoreYA);
-  rPuts("\n");
-  rPuts("\n  DICE HELD\n\n  ");
-  rPuts(to_string(ones) + " 1s, ");
-  rPuts(to_string(twos) + " 2s, ");
-  rPuts(to_string(threes) + " 3s, ");
-  rPuts(to_string(fours) + " 4s, ");
-  rPuts(to_string(fives) + " 5s, ");
-  rPuts(to_string(sixes) + " 6s.");
-  rPuts("\n\n");
+  printw("  SCORE CARD\n");
+
+  if (score1s == -1) {
+    printw("\n  Ones               a");
+  }
+  else {
+    printw("\n  Ones               %d", score1s);
+  }
+
+  if (score2s == -1) {
+    printw("\n  Twos               b");
+  }
+  else {
+    printw("\n  Twos               %d", score2s);
+  }
+
+  if (score3s == -1) {
+    printw("\n  Threes             c");
+  }
+  else {
+    printw("\n  Threes             %d", score3s);
+  }
+
+  if (score4s == -1) {
+    printw("\n  Fours              d");
+  }
+  else {
+    printw("\n  Fours              %d", score4s);
+  }
+
+  if (score5s == -1) {
+    printw("\n  Fives              e");
+  }
+  else {
+    printw("\n  Fives              %d", score5s);
+  }
+
+  if (score6s == -1) {
+    printw("\n  Sixes              f");
+  }
+  else {
+    printw("\n  Sixes              %d", score6s);
+  }
+
+  if (scoreTK == -1) {
+    printw("\n  Three of a Kind    g");
+  }
+  else {
+    printw("\n  Three of a Kind    %d", scoreTK);
+  }
+
+  if (scoreFK == -1) {
+    printw("\n  Four of a Kind     h");
+  }
+  else {
+    printw("\n  Four of a Kind     %d", scoreFK);
+  }
+
+  if (scoreFH == -1) {
+    printw("\n  Full House         i");
+  }
+  else {
+    printw("\n  Full House         %d", scoreFH);
+  }
+
+  if (scoreSS == -1) {
+    printw("\n  Small Straight     j");
+  }
+  else {
+    printw("\n  Small Straight     %d", scoreSS);
+  }
+
+  if (scoreLS == -1) {
+    printw("\n  Large Straight     k");
+  }
+  else {
+    printw("\n  Large Straight     %d", scoreLS);
+  }
+
+  if (scoreCH == -1) {
+    printw("\n  Chance             l");
+  }
+  else {
+    printw("\n  Chance             %d", scoreCH);
+  }
+
+  if (scoreYA == -1) {
+    printw("\n  Yahtzee            m");
+  }
+  else {
+    printw("\n  Yahtzee            %d", scoreYA);
+  }
+
+  printw("\n\n  DICE HELD\n\n  ");
+  printw("%d 1s, ", ones);
+  printw("%d 2s, ", twos);
+  printw("%d 3s, ", threes);
+  printw("%d 4s, ", fours);
+  printw("%d 5s, ", fives);
+  printw("%d 6s, ", sixes);
+  printw("\n\n");
+  refresh();
 }
 
 /* Loop to insure that a valid input has been entered */
 void scoringSelection() {
   string choice;
-  int num;
   bool exitLoop = false;
 
   while (exitLoop == false) {
     scoreCard();
-    rPuts("  Which scorebox? ");
+    printw("  Which scorebox? ");
+    refresh();
     choice = nInput(1);
 
-    if ((choice == "a") && (score1s == "a")) {
-      num = ones;
-      score1s = to_string(num);
+    if ((choice == "a") && (score1s == -1)) {
+      score1s = ones;
       exitLoop = true;
     };
 
-    if ((choice == "b") && (score2s == "b")) {
-      num = (twos * 2);
-      score2s = to_string(num);
+    if ((choice == "b") && (score2s == -1)) {
+      score2s = (twos * 2);
       exitLoop = true;
     };
 
-    if ((choice == "c") && (score3s == "c")) {
-      num = (threes * 3);
-      score3s = to_string(num);
+    if ((choice == "c") && (score3s == -1)) {
+      score3s = (threes * 3);
       exitLoop = true;
     };
 
-    if ((choice == "d") && (score4s == "d")) {
-      num = (fours * 4);
-      score4s = to_string(num);
+    if ((choice == "d") && (score4s == -1)) {
+      score4s = (fours * 4);
       exitLoop = true;
     };
 
-    if ((choice == "e") && (score5s == "e")) {
-      num = (fives * 5);
-      score5s = to_string(num);
+    if ((choice == "e") && (score5s == -1)) {
+      score5s = (fives * 5);
       exitLoop = true;
     };
 
-    if ((choice == "f") && (score6s == "f")) {
-      num = (sixes * 6);
-      score6s = to_string(num);
+    if ((choice == "f") && (score6s == -1)) {
+      score6s = (sixes * 6);
       exitLoop = true;
     };
 
-    if ((choice == "g") && (scoreTK == "g")) {
-      num = threeOfAKind();
-      scoreTK = to_string(num);
+    if ((choice == "g") && (scoreTK == -1)) {
+      scoreTK = threeOfAKind();
       exitLoop = true;
     };
 
-    if ((choice == "h") && (scoreFK == "h")) {
-      num = fourOfAKind();
-      scoreFK = to_string(num);
+    if ((choice == "h") && (scoreFK == -1)) {
+      scoreFK = fourOfAKind();
       exitLoop = true;
     };
 
-    if ((choice == "i") && (scoreFH == "i")) {
-      num = fullHouse();
-      scoreFH = to_string(num);
+    if ((choice == "i") && (scoreFH == -1)) {
+      scoreFH = fullHouse();
       exitLoop = true;
     };
 
-    if ((choice == "j") && (scoreSS == "j")) {
-      num = smallStraight();
-      scoreSS = to_string(num);
+    if ((choice == "j") && (scoreSS == -1)) {
+      scoreSS = smallStraight();
       exitLoop = true;
     };
 
-    if ((choice == "k") && (scoreLS == "k")) {
-      num = largeStraight();
-      scoreLS = to_string(num);
+    if ((choice == "k") && (scoreLS == -1)) {
+      scoreLS = largeStraight();
       exitLoop = true;
     };
 
-    if ((choice == "l") && (scoreCH == "l")) {
-      num = chance();
-      scoreCH = to_string(num);
+    if ((choice == "l") && (scoreCH == -1)) {
+      scoreCH = chance();
       exitLoop = true;
     };
 
-    if ((choice == "m") && (scoreYA == "m")) {
-      num = yahtzee();
-      scoreYA = to_string(num);
+    if ((choice == "m") && (scoreYA == -1)) {
+      scoreYA = yahtzee();
       exitLoop = true;
     };
   }

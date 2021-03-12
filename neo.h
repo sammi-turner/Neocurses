@@ -103,10 +103,6 @@ int toInt(string arg) {
   return std::stoi(arg);
 }
 
-string toString(int arg) {
-  return std::to_string(arg);
-}
-
 // Random numbers
 void seed() {
   srand((int)time(0));
